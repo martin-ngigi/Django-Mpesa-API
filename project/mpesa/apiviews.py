@@ -8,8 +8,13 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from .forms import STKPushForm, GetMpesaPaymentForm
 
+from django.views.decorators.csrf import csrf_exempt
+#1# from django.views.decorators.csrf import ensure_csrf_cookie
+
 
 class RequestMpesaSTKPushView(View):
+    @csrf_exempt 
+    #2# @ensure_csrf_cookie
     def post(self, request):
         form = STKPushForm(request.POST)
         if form.is_valid():
