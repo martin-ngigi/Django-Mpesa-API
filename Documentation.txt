@@ -1,5 +1,6 @@
 1.SETTING UP 
 Link - https://code.visualstudio.com/docs/python/tutorial-django
+GITHUB LINK -> https://github.com/henrykuria/django-mpesa
 1.1 create a virtual environment named .venv based on your current interpreter:
     # Linux
     sudo apt-get install python3-venv    # If needed
@@ -28,6 +29,10 @@ Link - https://code.visualstudio.com/docs/python/tutorial-django
     python -m pip install django
 
 INSTALLATIONS 
+pip install djangorestframework
+pip install django-mpesa-payments
+pip install requests
+
 Exporting requirements:
 	pip freeze > requirements.txt
 Installing requirements:
@@ -51,5 +56,13 @@ navigate to mongo_django_project by typing:
 
 3. CREATING DJANGO APP
 3.1 In the VS Code Terminal with your virtual environment activated, run the administrative utility's startapp command in your project folder (where manage.py resides):
-    python manage.py startapp accounts
-    python manage.py startapp posts
+    python manage.py startapp app
+    
+GITHUB LINK -> https://github.com/henrykuria/django-mpesa
+
+4. Create superuser:
+python manage.py createsuperuser
+
+username: admin
+email: admin@gmail.com
+password: 1234
